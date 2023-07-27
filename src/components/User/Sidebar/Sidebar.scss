@@ -1,0 +1,99 @@
+
+@import "../../../style.scss";
+
+.leftSideBar {
+  @include themify($themes) {
+    // flex: 1.8;
+    margin-top: 50px;
+    position: sticky;
+    // top: 70px;
+    // height: calc(100vh - 70px);
+    max-height: 500px;
+    min-height: 500px;
+    overflow-y: auto;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: transparent transparent; /* For Firefox */
+    background-color: themed("bg");
+    color: themed("textColor");
+    border-radius: 20px;      
+    box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+
+
+    .leftSideBar::-webkit-scrollbar {
+      width: 8px; /* For Chrome, Safari, and Opera */
+    }
+    
+    .leftSideBar::-webkit-scrollbar-track {
+      background: transparent; /* For Chrome, Safari, and Opera */
+    }
+    
+    .leftSideBar::-webkit-scrollbar-thumb {
+      background-color: transparent; /* For Chrome, Safari, and Opera */
+    }
+    
+
+
+
+    @include mobile{
+      display: none;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+
+    .sidebarContainer {
+      padding: 20px;
+
+
+      hr {
+        margin: 20px 0px;
+        border: none;
+        height: 0.5px;
+        background-color: themed("border");
+      }
+
+      .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        span {
+          font-size: 12px;
+        }
+
+        .user {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+
+          span {
+            font-size: 14px;
+          }
+        }
+
+        .item {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          img {
+            width: 30px;
+          }
+
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.searchcard-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.searchcard {
+  /* width: 250px; */
+  margin-bottom: 20px;
+  /* margin-top: 20px; */
+  margin-right: 2em; 
+}
+.button-container {
+  display: flex;
+  justify-content: space-between;
+
+}
